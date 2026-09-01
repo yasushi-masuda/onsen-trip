@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>下部温泉 1泊2日 旅のしおり | 2026.09.05 - 09.06</title>
+  <meta name="description" content="代々木上原発着・富士急・下部ホテル・山梨ほうとうランチを楽しむ1泊2日下部温泉旅行のインタラクティブWeb旅しおり。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="nav-header">
+    <div class="nav-content">
+      <div class="nav-logo">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+        </svg>
+        <span>下部温泉 旅しおり</span>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-icon" title="テーマ切り替え" aria-label="Toggle Theme">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="app-container">
+
+    <!-- Hero Banner -->
+    <section class="hero">
+      <div class="hero-pattern"></div>
+      <div class="hero-badge">
+        <span>♨️ 温泉＆富士急＆ほうとうドライブ旅</span>
+      </div>
+      <h1 class="hero-title">下部温泉 1泊2日の旅</h1>
+      <p class="hero-subtitle" id="countdown-text">出発まで計算中...</p>
+
+      <div class="hero-meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">日程</span>
+          <span class="meta-val">9/5(土) - 9/6(日)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">集合</span>
+          <span class="meta-val">07:00 代々木上原</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">移動手段</span>
+          <span class="meta-val">車 (ドライブ)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">宿泊</span>
+          <span class="meta-val">下部ホテル</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs Navigation -->
+    <nav class="tabs-nav" aria-label="旅行ナビゲーション">
+      <button class="tab-btn active" data-tab="tab-timeline">
+        <span>📅</span> 行程タイムライン
+      </button>
+      <button class="tab-btn" data-tab="tab-hotel">
+        <span>♨️</span> 下部ホテル詳細
+      </button>
+      <button class="tab-btn" data-tab="tab-spots">
+        <span>🗻</span> 富士急＆ほうとう
+      </button>
+      <button class="tab-btn" data-tab="tab-checklist">
+        <span>🧳</span> 持ち物チェック
+      </button>
+    </nav>
+
+    <!-- Tab 1: 行程タイムライン -->
+    <section id="tab-timeline" class="tab-pane">
+      <div class="section-header">
+        <h2 class="section-title">旅程スケジュール</h2>
+      </div>
+
+      <div class="timeline">
+        
+        <!-- Day 1 Header -->
+        <div class="timeline-day-header">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <span>Day 1 : 2026年9月5日 (土) 【富士急 ＆ 温泉宿チェックイン】</span>
+        </div>
+
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">07:00</span>
+            <h3 class="timeline-item-title">代々木上原（自宅）集合・出発 🚗</h3>
+            <p class="timeline-item-desc">荷物を車に積み込んで山梨方面へ出発！中央自動車道経由で富士山エリアへ。</p>
+            <div class="card-actions">
+              <a href="https://maps.google.com/?q=代々木上原駅" target="_blank" rel="noopener" class="btn-action">
+                📍 代々木上原 Map
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">09:15 - 12:15</span>
+            <h3 class="timeline-item-title">富士急ハイランド 🎢【二大コースター制覇！】</h3>
+            <p class="timeline-item-desc">
+              <strong>★二大二本柱コースター確定:</strong> 『ええじゃないか』 ＆ 『FUJIYAMA』を完全制覇！世界屈指のスリルを満喫。
+            </p>
+            <div class="card-actions">
+              <a href="https://www.fujiq.jp/attraction/eejanaika.html" target="_blank" rel="noopener" class="btn-action" style="background:var(--accent-soft); border-color:var(--accent); color:var(--accent);">
+                🎢 ええじゃないか
+              </a>
+              <a href="https://www.fujiq.jp/attraction/fujiyama.html" target="_blank" rel="noopener" class="btn-action" style="background:var(--accent-soft); border-color:var(--accent); color:var(--accent);">
+                🎢 FUJIYAMA
+              </a>
+              <a href="https://maps.google.com/?q=富士急ハイランド" target="_blank" rel="noopener" class="btn-action">
+                📍 MAP
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: Lunch -->
+        <div class="timeline-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">12:30 - 13:30</span>
+            <h3 class="timeline-item-title">富士河口湖エリアでランチ 🍴</h3>
+            <p class="timeline-item-desc">河口湖畔のオシャレなカフェや和食処、美味しい地元グルメでリフレッシュランチ。</p>
+            <div class="card-actions">
+              <a href="https://maps.google.com/?q=富士河口湖+ランチ" target="_blank" rel="noopener" class="btn-action">
+                📍 河口湖ランチ Map検索
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4: Scenic Drive -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">13:45 - 15:30</span>
+            <h3 class="timeline-item-title">鳴沢氷穴 ➔ 精進湖 ➔ 本栖湖 絶景ドライブ 🚗</h3>
+            <p class="timeline-item-desc">
+              富士五湖の魅力を巡るドライブコース！<br>
+              ① <strong>鳴沢氷穴</strong>：ひんやり神秘的な氷の洞窟体験<br>
+              ② <strong>精進湖</strong>：「子抱き富士」の美しい静寂な湖畔<br>
+              ③ <strong>本栖湖</strong>：千円札の裏面に描かれた絶景の富士山撮影スポット
+            </p>
+            <div class="card-actions">
+              <a href="https://maps.google.com/?q=鳴沢氷穴" target="_blank" rel="noopener" class="btn-action">
+                🧊 鳴沢氷穴 MAP
+              </a>
+              <a href="https://maps.google.com/?q=精進湖" target="_blank" rel="noopener" class="btn-action">
+                🌊 精進湖 MAP
+              </a>
+              <a href="https://maps.google.com/?q=本栖湖+中ノ倉峠展望地" target="_blank" rel="noopener" class="btn-action">
+                📷 本栖湖 MAP (千円札富士)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5: Hotel Check-in -->
+        <div class="timeline-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">15:45 - 16:15</span>
+            <h3 class="timeline-item-title">下部ホテル チェックイン ♨️</h3>
+            <p class="timeline-item-desc">本栖湖から本栖道（国道300号）を下り、下部ホテルに到着！和室のお部屋でひと休み。</p>
+            <div class="card-actions">
+              <a href="tel:0556360311" class="btn-action">📞 TEL: 0556-36-0311</a>
+              <a href="https://maps.google.com/?q=下部ホテル+山梨県南巨摩郡身延町上之平1900" target="_blank" rel="noopener" class="btn-action">
+                📍 下部ホテル MAP
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">16:30 - 18:30</span>
+            <h3 class="timeline-item-title">下部温泉 湯めぐり＆露天風呂 浴衣時間 湯</h3>
+            <p class="timeline-item-desc">武田信玄の隠し湯として知られる下部温泉の名湯に浸かって日頃の疲れをリフレッシュ。</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5 -->
+        <div class="timeline-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">18:30 -</span>
+            <h3 class="timeline-item-title">出来立てアツアツ！贅沢バイキングディナー 🍱</h3>
+            <p class="timeline-item-desc">ライブキッチンで揚げたて天ぷら＆焼き立てステーキ、季節の和洋バイキングを満喫！</p>
+          </div>
+        </div>
+
+        <!-- Day 2 Header -->
+        <div class="timeline-day-header">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <span>Day 2 : 2026年9月6日 (日) 【南アルプス フルーツ ＆ ほうとうランチ】</span>
+        </div>
+
+        <!-- Timeline Item 6 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">08:00 - 10:00</span>
+            <h3 class="timeline-item-title">朝食バイキング ＆ 朝風呂 温泉</h3>
+            <p class="timeline-item-desc">清々しい朝の清流露天風呂を愉しみ、出来立ての朝食バイキングでしっかりエネルギーチャージ。</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 7 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">10:00</span>
+            <h3 class="timeline-item-title">下部ホテル チェックアウト 🔑</h3>
+            <p class="timeline-item-desc">フロントで現地決済 (¥53,100)。お世話になりました！南アルプス方面へ出発。</p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 8: Fruit -->
+        <div class="timeline-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">10:30 - 12:00</span>
+            <h3 class="timeline-item-title">南アルプス市で旬のフルーツ堪能！ 🍇</h3>
+            <p class="timeline-item-desc">
+              9月は絶品ぶどう＆シャインマスカットのベストシーズン！南アルプスの農園でぶどう狩りや新鮮フルーツパフェを満喫。
+            </p>
+            <div class="card-actions">
+              <a href="https://maps.google.com/?q=南アルプス市+ぶどう狩り" target="_blank" rel="noopener" class="btn-action">
+                🍇 南アルプス ぶどう狩り農園 Map
+              </a>
+              <a href="https://maps.google.com/?q=道の駅しらね" target="_blank" rel="noopener" class="btn-action">
+                🛍️ 道の駅しらね (直売所)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 9: Houtou Lunch -->
+        <div class="timeline-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">12:15 - 13:30</span>
+            <h3 class="timeline-item-title">山梨名物！絶品ほうとうランチ 🍜</h3>
+            <p class="timeline-item-desc">
+              甲州名物「ほうとう」の名店へ！あつあつ味噌スープとゴロゴロかぼちゃ、もちもち手打ち麺を堪能。
+            </p>
+            <div class="card-actions">
+              <a href="https://maps.google.com/?q=甲州ほうとう小作+甲府昭和店" target="_blank" rel="noopener" class="btn-action">
+                📍 小作 甲府昭和店 MAP
+              </a>
+              <a href="https://maps.google.com/?q=ほうとう蔵+歩成" target="_blank" rel="noopener" class="btn-action">
+                📍 ほうとう蔵 歩成 MAP
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 10: Home -->
+        <div class="timeline-item highlight">
+          <div class="timeline-dot"></div>
+          <div class="card">
+            <span class="timeline-time-tag">14:00 - 15:00</span>
+            <h3 class="timeline-item-title">代々木上原（自宅）到着・解散 🏠</h3>
+            <p class="timeline-item-desc">中央道経由で代々木上原へ帰着。楽しかった1泊2日の山梨温泉＆ドライブ旅が無事終了！</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Tab 2: 下部ホテル詳細 -->
+    <section id="tab-hotel" class="tab-pane" style="display: none;">
+      <div class="section-header">
+        <h2 class="section-title">宿泊施設情報</h2>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-header">
+          <div>
+            <span class="hotel-badge">予約完了</span>
+            <h3 class="hotel-name" style="margin-top:6px;">下部ホテル (しもべホテル)</h3>
+          </div>
+        </div>
+
+        <div class="hotel-grid">
+          <div class="info-block">
+            <div class="info-block-label">チェックイン</div>
+            <div class="info-block-val">2026/09/05 (土) 15:00</div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">チェックアウト</div>
+            <div class="info-block-val">2026/09/06 (日) 10:00</div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">予約番号</div>
+            <div class="info-block-val">X-BTKR4LQDNRW</div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">お支払額 (現地決済)</div>
+            <div class="info-block-val" style="color:var(--accent);">¥53,100 (大人2名)</div>
+          </div>
+        </div>
+
+        <div class="info-block" style="margin-bottom:16px;">
+          <div class="info-block-label">プラン内容</div>
+          <div class="info-block-val">★バイキング★ライブキッチンで出来立てアツアツ！贅沢なバイキング</div>
+          <div style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">部屋: 和室10畳または12畳【禁煙】 1部屋</div>
+        </div>
+
+        <div class="info-block" style="margin-bottom:16px;">
+          <div class="info-block-label">所在地・連絡先</div>
+          <div class="info-block-val">〒409-2904 山梨県南巨摩郡身延町上之平1900</div>
+          <div class="info-block-val">TEL: 0556-36-0311</div>
+        </div>
+
+        <div class="card-actions">
+          <a href="tel:0556360311" class="btn-action" style="background:var(--primary); color:#fff;">
+            📞 電話を発信 (0556-36-0311)
+          </a>
+          <a href="https://maps.google.com/?q=山梨県南巨摩郡身延町上之平1900+下部ホテル" target="_blank" rel="noopener" class="btn-action">
+            🗺️ Google Mapsルート案内
+          </a>
+          <a href="https://www.489pro-x.com/ja/s/shimobe/booking/login/" target="_blank" rel="noopener" class="btn-action">
+            📄 予約確認ページ
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: 観光＆ほうとうグルメ -->
+    <section id="tab-spots" class="tab-pane" style="display: none;">
+      <div class="section-header">
+        <h2 class="section-title">富士急 ＆ 山梨ほうとう銘店</h2>
+      </div>
+
+      <div class="grid-2col">
+        <!-- Spot 1 -->
+        <div class="card spot-card">
+          <div>
+            <span class="spot-tag">アトラクション / 絶叫</span>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">富士急ハイランド</h3>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:8px;">
+              <strong>🎯 二大二本柱コースター（確定）:</strong><br>
+              1. <strong>【確定】ええじゃないか</strong> (総回転数世界一！4D回転コースター)<br>
+              2. <strong>【確定】FUJIYAMA</strong> (キング・オブ・コースター！最高速度130km/h)<br>
+              <span style="font-size:0.82rem; color:var(--text-light);">(余裕があれば 高飛車 / ZOKKON)</span>
+            </p>
+          </div>
+          <div class="card-actions" style="margin-top:8px; border:none; padding-top:0;">
+            <a href="https://www.fujiq.jp/attraction/" target="_blank" rel="noopener" class="btn-action">
+              🎡 アトラクション一覧
+            </a>
+            <a href="https://maps.google.com/?q=富士急ハイランド" target="_blank" rel="noopener" class="btn-action">
+              📍 マップを見る
+            </a>
+          </div>
+        </div>
+
+        <!-- Spot 2: Minami Alps Fruits -->
+        <div class="card spot-card">
+          <div>
+            <span class="spot-tag">フルーツ狩り / 旬の味覚</span>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">南アルプス市 フルーツ農園 🍇</h3>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:12px;">
+              9月上旬はシャインマスカット・巨峰の最盛期！南アルプス市の観光農園や直売所（道の駅しらね等）で高級ぶどう狩り・フルーツパフェを堪能。
+            </p>
+          </div>
+          <div class="card-actions" style="margin-top:8px; border:none; padding-top:0;">
+            <a href="https://maps.google.com/?q=南アルプス市+ぶどう狩り" target="_blank" rel="noopener" class="btn-action">
+              🍇 ぶどう狩り農園 MAP
+            </a>
+            <a href="https://maps.google.com/?q=道の駅しらね" target="_blank" rel="noopener" class="btn-action">
+              📍 道の駅しらね MAP
+            </a>
+          </div>
+        </div>
+
+        <!-- Spot 3 -->
+        <div class="card spot-card">
+          <div>
+            <span class="spot-tag">山梨名物グルメ</span>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">甲州ほうとう 小作 (甲府昭和・甲府駅前)</h3>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:12px;">
+              山梨ほうとうの代名詞。ゴロゴロ大きなかぼちゃと自家製味噌スープ、秘伝のもちもち麺が絶品。
+            </p>
+          </div>
+          <a href="https://maps.google.com/?q=甲州ほうとう+小作+山梨" target="_blank" rel="noopener" class="btn-action">
+            📍 周辺店舗検索
+          </a>
+        </div>
+
+        <!-- Spot 3 -->
+        <div class="card spot-card">
+          <div>
+            <span class="spot-tag">山梨グルメ (建築美)</span>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">ほうとう不動</h3>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:12px;">
+              雲のような白いドーム型建築が印象的な名店。コシのある麺と素朴な出汁が人気。
+            </p>
+          </div>
+          <a href="https://maps.google.com/?q=ほうとう不動" target="_blank" rel="noopener" class="btn-action">
+            📍 店舗を検索
+          </a>
+        </div>
+
+        <!-- Spot 4 -->
+        <div class="card spot-card">
+          <div>
+            <span class="spot-tag">自然 / 洞窟</span>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">鳴沢氷穴 (なるさわひょうけつ)</h3>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:12px;">
+              天然記念物の溶岩洞窟。夏でも平均気温3度でひんやり！幻想的な氷の柱や氷の壁を体験。
+            </p>
+          </div>
+          <a href="https://maps.google.com/?q=鳴沢氷穴" target="_blank" rel="noopener" class="btn-action">
+            🧊 鳴沢氷穴 MAP
+          </a>
+        </div>
+
+        <!-- Spot 5 -->
+        <div class="card spot-card">
+          <div>
+            <span class="spot-tag">富士五湖 / 絶景</span>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">精進湖 (しょうじこ)</h3>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:12px;">
+              富士五湖の中で最も小さな静寂の湖。「子抱き富士」と呼ばれる手前の大室山と富士山が重なる景色が名物。
+            </p>
+          </div>
+          <a href="https://maps.google.com/?q=精進湖" target="_blank" rel="noopener" class="btn-action">
+            🌊 精進湖 MAP
+          </a>
+        </div>
+
+        <!-- Spot 6 -->
+        <div class="card spot-card">
+          <div>
+            <span class="spot-tag">千円札の富士山 / 絶景</span>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">本栖湖 (もとすこ)</h3>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:12px;">
+              千円札（野口英世）の裏面に描かれた、逆さ富士のモデル地。透明度バツグンの静かな湖。
+            </p>
+          </div>
+          <a href="https://maps.google.com/?q=本栖湖+中ノ倉峠展望地" target="_blank" rel="noopener" class="btn-action">
+            📷 本栖湖 MAP
+          </a>
+        </div>
+
+        <!-- Spot 7 -->
+        <div class="card spot-card">
+          <div>
+            <span class="spot-tag">観光 / パワースポット</span>
+            <h3 style="font-size:1.15rem; margin-bottom:8px;">身延山 久遠寺</h3>
+            <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:12px;">
+              下部ホテルから車で約15分。日蓮宗総本山で、しだれ桜や歴史ある大本堂、ロープウェイが有名。
+            </p>
+          </div>
+          <a href="https://maps.google.com/?q=身延山久遠寺" target="_blank" rel="noopener" class="btn-action">
+            📍 久遠寺 MAP
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: 持ち物チェック -->
+    <section id="tab-checklist" class="tab-pane" style="display: none;">
+      <div class="section-header">
+        <h2 class="section-title">持ち物チェックリスト</h2>
+      </div>
+
+      <div class="checklist-container">
+        <div class="progress-header">
+          <span style="font-weight:700; font-size:0.95rem;">準備進捗状況</span>
+          <span id="progress-text" style="font-weight:700; color:var(--accent); font-size:0.9rem;">0 / 0 (0%)</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+
+        <div id="checklist-groups">
+          <!-- Dynamic JS rendering -->
+        </div>
+
+        <form id="add-item-form" class="add-item-form">
+          <input type="text" id="custom-item-input" class="input-text" placeholder="追加したい持ち物を入力..." required>
+          <button type="submit" class="btn-primary">追加</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>下部温泉 1泊2日 旅のしおり | 2026.09.05 - 09.06</p>
+    <p style="margin-top:4px; opacity:0.8;">代々木上原発 ➔ 富士急 ➔ 下部ホテル ➔ 山梨ほうとう</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

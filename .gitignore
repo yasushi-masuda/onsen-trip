@@ -1,0 +1,5 @@
+# Ignore private reservation files & local AI ledgers
+宿予約.pdf
+.ai/
+*.log
+.DS_Store
