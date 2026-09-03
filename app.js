@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initThemeToggle();
   initChecklist();
+  fetchLiveWeather();
 });
 
 /* 1. Countdown Timer (Target: 2026-09-05 07:00:00 JST) */
@@ -211,4 +212,82 @@ function escapeHtml(str) {
       "'": '&#039;'
     }[m];
   });
+}
+
+/* 6. Live Weather API Fetcher (Open-Meteo API) */
+async function fetchLiveWeather() {
+  try {
+    // 身延町 (下部温泉): 35.361, 138.455 / 富士河口湖町: 35.498, 138.756
+    const resShimobe = await fetch('https://api.open-meteo.com/v1/forecast?latitude=35.361&longitude=138.455&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Asia%2FTokyo');
+    const resFuji = await fetch('https://api.open-meteo.com/v1/forecast?latitude=35.498&longitude=138.756&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Asia%2FTokyo');
+
+    if (resShimobe.ok && resFuji.ok) {
+      const dataShimobe = await resShimobe.json();
+      const dataFuji = await resFuji.json();
+
+      updateWeatherGrid('weather-shimobe-grid', dataShimobe.daily);
+      updateWeatherGrid('weather-fuji-grid', dataFuji.daily);
+    }
+  } catch (e) {
+    console.log('Weather API offline or using fallback defaults:', e);
+  }
+}
+
+function updateWeatherGrid(gridId, dailyData) {
+  const grid = document.getElementById(gridId);
+  if (!grid || !dailyData || !dailyData.time) return;
+
+  // Find index for 2026-09-05 & 2026-09-06 if present, else first 2 available forecast days
+  const idxDay1 = dailyData.time.findIndex(t => t.includes('2026-09-05'));
+  const idxDay2 = dailyData.time.findIndex(t => t.includes('2026-09-06'));
+
+  const i1 = idxDay1 !== -1 ? idxDay1 : 0;
+  const i2 = idxDay2 !== -1 ? idxDay2 : 1;
+
+  if (dailyData.temperature_2m_max[i1] !== undefined) {
+    grid.innerHTML = `
+      <div class="weather-day-box">
+        <div class="weather-date-label">9/5 (土) DAY 1</div>
+        <div class="weather-icon-temp">
+          <span class="weather-icon-img">${getWeatherIcon(dailyData.weathercode[i1])}</span>
+          <div class="weather-temp-range">
+            <span class="temp-max">${Math.round(dailyData.temperature_2m_max[i1])}℃</span> / <span class="temp-min">${Math.round(dailyData.temperature_2m_min[i1])}℃</span>
+          </div>
+        </div>
+        <div class="weather-desc-text">${getWeatherDesc(dailyData.weathercode[i1])}</div>
+      </div>
+
+      <div class="weather-day-box">
+        <div class="weather-date-label">9/6 (日) DAY 2</div>
+        <div class="weather-icon-temp">
+          <span class="weather-icon-img">${getWeatherIcon(dailyData.weathercode[i2])}</span>
+          <div class="weather-temp-range">
+            <span class="temp-max">${Math.round(dailyData.temperature_2m_max[i2])}℃</span> / <span class="temp-min">${Math.round(dailyData.temperature_2m_min[i2])}℃</span>
+          </div>
+        </div>
+        <div class="weather-desc-text">${getWeatherDesc(dailyData.weathercode[i2])}</div>
+      </div>
+    `;
+  }
+}
+
+function getWeatherIcon(code) {
+  if (code === 0) return '☀️';
+  if (code === 1 || code === 2) return '🌤️';
+  if (code === 3) return '☁️';
+  if (code >= 45 && code <= 48) return '🌫️';
+  if (code >= 51 && code <= 67) return '🌧️';
+  if (code >= 80 && code <= 82) return '🌦️';
+  if (code >= 95) return '🌩️';
+  return '⛅';
+}
+
+function getWeatherDesc(code) {
+  if (code === 0) return '快晴';
+  if (code === 1 || code === 2) return '晴れ時々曇り';
+  if (code === 3) return '曇り';
+  if (code >= 51 && code <= 67) return '雨';
+  if (code >= 80 && code <= 82) return 'にわか雨';
+  if (code >= 95) return '雷雨';
+  return '晴れ/曇り';
 }
