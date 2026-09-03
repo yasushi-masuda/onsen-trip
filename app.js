@@ -82,6 +82,8 @@ const DEFAULT_CHECKLIST = [
   { id: 'c2', category: '貴重品・必需品', text: '現金（宿代 ¥53,100 現地決済用 ＋ 交通費・食費）', checked: false },
   { id: 'c3', category: '貴重品・必需品', text: 'クレジットカード・ETCカード', checked: false },
   { id: 'c4', category: '貴重品・必需品', text: 'スマホ・充電器・モバイルバッテリー', checked: false },
+  { id: 'c11', category: '貴重品・必需品', text: 'ノートPC・PC充電アダプター', checked: false },
+  { id: 'c12', category: '貴重品・必需品', text: '折りたたみ傘・雨具', checked: false },
   { id: 'c5', category: '着替え・温泉グッズ', text: '着替え（1泊2日分）', checked: false },
   { id: 'c6', category: '着替え・温泉グッズ', text: 'タオル・手ぬぐい（温泉めぐり用）', checked: false },
   { id: 'c7', category: '着替え・温泉グッズ', text: '洗面用具・スキンケア・常備薬', checked: false },
@@ -106,7 +108,20 @@ function initChecklist() {
 
   function loadChecklist() {
     const saved = localStorage.getItem('shimobe_checklist');
-    return saved ? JSON.parse(saved) : DEFAULT_CHECKLIST;
+    if (!saved) return DEFAULT_CHECKLIST;
+    try {
+      const parsed = JSON.parse(saved);
+      // Ensure all default items exist even if loaded from older localStorage cache
+      const existingIds = new Set(parsed.map(p => p.id));
+      DEFAULT_CHECKLIST.forEach(def => {
+        if (!existingIds.has(def.id)) {
+          parsed.push(def);
+        }
+      });
+      return parsed;
+    } catch (e) {
+      return DEFAULT_CHECKLIST;
+    }
   }
 
   function render() {
